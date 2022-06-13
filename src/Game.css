@@ -1,11 +1,22 @@
-  
+ol, ul {
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+
   .status {
+    display: flex;
+    align-content: flex-end;
     margin-bottom: 10px;
     color: rgb(10, 120, 223);
     font-size: 2em;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.336), rgba(32, 32, 32, 0.329));
     border-radius: 10px;
     padding: 5px 20px;
+    width: fit-content;
+    
 
   }
 
@@ -20,38 +31,47 @@
     animation-fill-mode: forwards; 
   
   }
-    
-  .game {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+
   
   .game-info {
-    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2em;
+
+    position: relative;
+    width: 100vw;
+    text-align: center;
   }
 
 .history {
+
   color: rgb(255, 255, 255);
   font-size: 1em;
-  font-weight: 900;
+  font-weight: 500;
   background: linear-gradient(to left, rgba(255, 255, 255, 0.336), rgba(32, 32, 32, 0.329));
   border-radius: 10px;
   padding: 5px 10px;
   border : none;
   cursor: pointer;
-  margin: 5px;
+
+  
+}
+
+.reset {
+  position : fixed;
 }
 
   @keyframes scaleUp {
 
   100% {
-      font-size: 2.5em; 
+      font-size: 2em; 
       color: rgb(10, 120, 223);
       background: linear-gradient(to top, rgba(14, 226, 138, 0.644), rgba(1, 53, 21, 0.473));
       border-radius: 10px;
       padding: 5px 20px;
-      /* transform: translateX(2em); */
+
       
   }
 }

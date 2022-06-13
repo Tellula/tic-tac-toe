@@ -1,7 +1,7 @@
 .box {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     justify-content: center;
+    align-content: center;
 }
   
   .board-row:after {
@@ -18,12 +18,10 @@
     font-size: 4em;
     font-weight: bold;
     line-height: 34px;
-    height: 2em;
-    margin-right: -1px;
-    margin-top: -1px;
+    height: 1em;
     padding: 0;
     text-align: center;
-    width: 2em;
+    width: 1em;
     color: rgb(15, 182, 248);
   }
 

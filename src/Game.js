@@ -42,6 +42,8 @@ class Game extends React.Component {
     });
   }
 
+
+
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
@@ -51,30 +53,31 @@ class Game extends React.Component {
       const desc = move ? "Go to move #" + move : "Go to game start";
       return (
         <li key={move}>
-          <button className="history" onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button className="history" onClick={() => this.jumpTo(move)}>
+            {desc}
+          </button>
         </li>
       );
     });
 
     let status;
     if (winner) {
-      status = "The Winner is " + winner + ' !!';
+      status = "The Winner is " + winner + " !!";
     } else {
       status = "Next player is " + (this.state.xIsNext ? "X" : "O") + " player";
     }
 
-    
+    // if (winner) {
+
+    // }
 
     return (
-      <div className="game">
-        <div className="game-board">
-          <Board
-            squares={current.squares}
-            onClick={(i) => this.handleClick(i)}
-          />
-        </div>
+      <div>
+        <Board squares={current.squares} onClick={(i) => this.handleClick(i)} />
+
+
         <div className="game-info">
-          <div className={(winner) ? "status-win" : "status"}>{status}</div>
+          <div className={winner ? "status-win" : "status"}>{status}</div>
           <ul>{moves}</ul>
         </div>
       </div>
