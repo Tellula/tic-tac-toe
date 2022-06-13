@@ -4,11 +4,13 @@ import './Board.css'
 function Square(props) {
 
     return (
-      <button className={ props.value === 'X' ? "square" : "square purple"} onClick={props.onClick}>
+      <button className={(props.value === 'X' ? "square" : "square purple")} onClick={props.onClick}>
         {props.value}
       </button>
     );
   }
+
+  
 
 class Board extends React.Component {
     renderSquare(i) {
