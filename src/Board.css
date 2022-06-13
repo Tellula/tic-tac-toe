@@ -1,0 +1,43 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+  .board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  
+
+  .square {
+    background: linear-gradient(to top, rgb(164, 209, 229), rgb(217, 166, 227));
+    border: 1px solid rgb(255, 250, 250);
+    float: left;
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 34px;
+    height: 2em;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 2em;
+    color: rgb(15, 182, 248);
+  }
+
+  .purple {
+    color: rgb(173, 7, 173);
+  }
+  
+  .square:focus {
+    outline: none;
+  }
+  
+  .kbd-navigation .square:focus {
+    background: #ddd;
+  }
+
+
+  
